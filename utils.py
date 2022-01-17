@@ -29,7 +29,7 @@ class Layer:
 	def feedforward(self):
 		# returns the weight computation of the layer, feed this into the next 
 		if self.final:
-			raise AttributeError('Cannot compute result from a final layer')
+			raise AttributeError('Cannot feed forward from a final layer')
 
 		return self.activations@self.weights + self.biases
 
